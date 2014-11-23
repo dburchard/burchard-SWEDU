@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EDUfacts - In Box</title>
+    <title>ContextED - In Box</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,23 +39,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">EDUfacts</a>
+                <a class="navbar-brand" href="#">ContextED</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">My Account</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">My Community</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Ask Us</a>
                     </li>
                 </ul>
+				<form class="navbar-form" role="search">
+				<div class="input-group pull-right">
+					<input type="text" class="form-control" placeholder="Search" name="filter" id="filter">
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+					</div>
+				</div>
+				</form>
             </div>
             <!-- /.navbar-collapse -->
+
 
 			<!--
                 <div class="collapse navbar-collapse">
@@ -81,7 +90,7 @@
     <!-- Page Content -->
     <div class="container">
 
-
+		<h1>Your In-box</h1>
 
 
 
@@ -99,8 +108,19 @@
 					</p>
 	
 					<!-- Date/Time -->
-					<p>Added on August 24, 2013 at 9:00 PM</p>
+					<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
 	
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+							<span class="glyphicon glyphicon-share-alt"></span>
+						</button>
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+							<span class="glyphicon glyphicon-pushpin"></span>
+						</button>
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+							<span class="glyphicon glyphicon-share-alt"></span>
+						</button>
+					</div>
 	
 					<!-- Post Content -->
 					<div class="editable shared-description" onClick="this.contentEditable='true';">
@@ -112,7 +132,7 @@
 					</div>
 	
 					<!-- Preview Image -->
-					<img class="img-responsive" src="img/cardboard_city.jpg" alt="">
+					<a href="#"><img class="img-responsive" src="img/cardboard_city.jpg" alt=""></a>
 
 				</article>
 
@@ -126,7 +146,7 @@
 					</p>
 	
 					<!-- Date/Time -->
-					<p>Added on August 24, 2013 at 9:00 PM</p>
+					<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
 	
 	
 					<!-- Post Content -->
@@ -139,7 +159,7 @@
 					</div>
 	
 					<!-- Preview Image -->
-					<img class="img-responsive" src="img/singer_studio.jpg" alt="">
+					<a href="#"><img class="img-responsive" src="img/singer_studio.jpg" alt=""></a>
 
 				</article>
 
@@ -153,7 +173,7 @@
 					</p>
 	
 					<!-- Date/Time -->
-					<p>Added on August 24, 2013 at 9:00 PM</p>
+					<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
 	
 	
 					<!-- Post Content -->
@@ -166,9 +186,67 @@
 					</div>
 	
 					<!-- Preview Image -->
-					<img class="img-responsive" src="img/voice_memos.jpg" alt="">
+					<a href="#"><img class="img-responsive" src="img/voice_memos.jpg" alt=""></a>
 
 				</article>
+
+
+                <!-- Artifact 4 -->
+                <article class="artifact">
+
+					<!-- Owner -->
+					<p class="owner">
+						<a href="#"><span>Owner's Name</span></a>
+					</p>
+	
+					<!-- Date/Time -->
+					<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
+	
+	
+					<!-- Post Content -->
+					<div class="editable shared-description" onClick="this.contentEditable='true';">
+						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
+					</div>
+	
+					<div class="editable private-comment" onClick="this.contentEditable='true';">
+						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					</div>
+	
+					<!-- Preview Image -->
+					<a href="#"><img class="img-responsive" src="img/text_block.jpg" alt=""></a>
+
+				</article>
+
+
+                <!-- Artifact 5 -->
+                <article class="artifact">
+
+					<!-- Owner -->
+					<p class="owner">
+						<a href="#"><span>Owner's Name</span></a>
+					</p>
+	
+					<!-- Date/Time -->
+					<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
+	
+	
+					<!-- Post Content -->
+					<div class="editable shared-description" onClick="this.contentEditable='true';">
+						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
+					</div>
+	
+					<div class="editable private-comment" onClick="this.contentEditable='true';">
+						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					</div>
+	
+					<!-- Preview Image -->
+					<a href="#"><img class="img-responsive" src="img/local_cuisine.jpg" alt=""></a>
+
+				</article>
+				
+				<div class="loadmore">
+					<button id="nextpage" class="btn btn-default" type="button">Load More Artifacts</button>
+				</div>
 
             </div>
 
@@ -212,7 +290,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; EDUfacts 2014</p>
+                    <p>Copyright &copy; ContectED 2014</p>
                     <p>Please read our <a href="#">Policies</a> page. If you have any questions, you can always <a href="#">Ask Us</a>.</p>
                 </div>
             </div>
@@ -232,6 +310,10 @@
 	<!--
 
         $( document ).ready(function() {
+
+			$('#nextpage').bind('click', function() {
+				alert('loading...');
+			});
 
 			function highlighttags(obj) {
 				obj.each( function() {

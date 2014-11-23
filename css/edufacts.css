@@ -25,6 +25,16 @@ footer {
 	left: -999em;
 }
 
+.artifact {
+	border-bottom: thin solid #999;
+	padding-bottom: 2.5em;
+	margin-bottom: 2.5em;
+}
+
+.pubdate {
+	font-size: 80%;
+}
+
 .shared-description {
 	margin-bottom:0.7em;
 }
@@ -69,13 +79,23 @@ footer {
 .hidemarker {
 	background: #ccc;
 	color: #666;
-	border this solid #999;
+	border thin solid #999;
 	border-radius: 4px;
 	box-shadow: inset 0 1px 1px #aaa;
 	padding: 1em;
 	text-align: center;
 }
 
-.img_responsive {
+.img-responsive {
+	border: thin solid #999;
 	border-radius: 4px;
 }
+
+.loadmore {
+	text-align: center;
+	padding-bottom: 2.5em;
+}
+
+
+
+
