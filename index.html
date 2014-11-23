@@ -112,7 +112,7 @@
 					</div>
 	
 					<!-- Preview Image -->
-					<img class="img-responsive" src="http://placehold.it/900x300" alt="">
+					<img class="img-responsive" src="img/cardboard_city.jpg" alt="">
 
 				</article>
 
@@ -178,22 +178,21 @@
 
         $( document ).ready(function() {
 
-			/* 	str.replace(/microsoft/i, "W3Schools")
-				
-				- Get content of each field
-				- modify each content
-				- replace field content
-
-			*/
-			$('.editable').each( function() {
-				var txt = $(this).html();
-				txt = txt.replace(/(\#[a-zA-Z0-9_]+)/g, '<span class="hashtag">' + \1 + '</span>');
-				$(this).html(txt);
-			});
+			function highlighttags(obj) {
+				obj.each( function() {
+					var txt = $(this).text();
+					txt = txt.replace(/(#[\w\d_]+)/g, '<span class="hashtag">$1</span>');
+					txt = txt.replace(/(@[\w\d_]+)/g, '<span class="usertag">$1</span>');
+					$(this).html(txt);
+				});
+			}
 
 			function savechanges() {
-				alert('changes saved');
+				/* alert('changes saved'); */
+				highlighttags( $('.editable') );
 			}
+			
+			highlighttags( $('.editable') );
 
 			$('.editable').bind('input', function(e) {
 
