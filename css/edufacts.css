@@ -31,8 +31,17 @@ footer {
 	margin-bottom: 2.5em;
 }
 
+.artifact header {
+	text-align:right;
+	margin-bottom: 0.5em;
+}
+
 .pubdate {
+	float: left;
 	font-size: 80%;
+}
+
+.share-ctrls {
 }
 
 .shared-description {
@@ -56,6 +65,10 @@ footer {
 	background:#ccccff;
 	padding: 0 0.3em;
 	border-radius: 6px;
+}
+
+.tags-suggested .usertag, .tags-suggested .hashtag {
+	background: #ccff99;
 }
 
 .editable {
