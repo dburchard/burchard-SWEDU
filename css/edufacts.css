@@ -71,6 +71,10 @@ footer {
 	background: #ccff99;
 }
 
+.tags-suggested {
+	margin-bottom: 0.5em;
+}
+
 .editable {
 	border: none;
 	border-color: Transparent;
