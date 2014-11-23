@@ -109,11 +109,12 @@
 	
 					<!-- Post Content -->
 					<div class="editable shared-description">
-						<textarea name="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</textarea>
+						<textarea id="comments" placeholder="Type many lines of texts in here and you will see magic stuff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore
+						</textarea>
 					</div>
 	
 					<div class="editable private-comment">
-						<textarea name="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</textarea>
+						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore<br class="lbr"></div>
 					</div>
 	
 					<!-- Preview Image -->
@@ -147,23 +148,37 @@
 
 	<script type="text/javascript" language="JavaScript" charset="utf-8">
 	<!--
-		$( document ).ready(function() {
 
-			$('.editable ').bind( "input", function() {
+        $( document ).ready(function() {
 
-					
+			var txt = $('#comments'),    
+			hiddenDiv = $(document.createElement('div')),
+			content = null;
+			
+			txt.addClass('noscroll');
+			hiddenDiv.addClass('hiddendiv');
+			
+			$('body').append(hiddenDiv);
+			
+			$('.editable div').bind('click', function() {
+				var current = $(this).html();
+				var newtextarea = $(document.createElement('textarea'));
+				newtextarea.html(current);
+				newtextarea.attr('id',"comments")
+				$(this).parent().html( newtextarea );
+			});
+			
+			txt.bind('keyup', function(e) {
 
-				var txt = $(this),
-					hiddenDiv = $(document.createElement('div')),
-					content = null;
+				var txt = $(this);
 
-				hiddenDiv.addClass('hiddendiv');
+				content = txt.val();
 				
-				txt.on( "input", function () {
+				content = content.replace(/\n/g, '<br>');
+				content.trim('<br>');
+				hiddenDiv.html(content + '<br class="lbr">');
 
-					alert('eq:');
-
-				});
+				txt.css('height', hiddenDiv.height());
 
 			});
 
