@@ -93,34 +93,61 @@
                 <!-- Artifact -->
                 <article class="artifact">
 
-					<!-- Title -->
-					<h1>Blog Post Title</h1>
-	
 					<!-- Owner -->
-					<p class="lead">
-						by <a href="#">Start Bootstrap</a>
+					<p class="owner">
+						<a href="#"><span>Owner's Name</span></a>
 					</p>
 	
-					<hr>
-	
 					<!-- Date/Time -->
-					<p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+					<p>Added on August 24, 2013 at 9:00 PM</p>
 	
 	
 					<!-- Post Content -->
-					<div class="editable shared-description">
-						<textarea id="comments" placeholder="Type many lines of texts in here and you will see magic stuff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore
-						</textarea>
+					<div class="editable shared-description" onClick="this.contentEditable='true';">
+						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
 					</div>
 	
-					<div class="editable private-comment">
-						<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore<br class="lbr"></div>
+					<div class="editable private-comment" onClick="this.contentEditable='true';">
+						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
 					</div>
 	
 					<!-- Preview Image -->
 					<img class="img-responsive" src="http://placehold.it/900x300" alt="">
 
 				</article>
+
+            </div>
+
+
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+
+                <!-- Tag Metadata Well -->
+                <div class="well">
+                    <h4>Tag Name</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                        	<dl>
+                        		<dt>Name</dt>
+                        		<dd><a href="#">Value</a></dd>
+
+                        		<dt>Name</dt>
+                        		<dd><a href="#">Value</a></dd>
+
+                        		<dt>Name</dt>
+                        		<dd><a href="#">Value</a></dd>
+
+                        		<dt>Name</dt>
+                        		<dd><a href="#">Value</a></dd>
+
+                        	</dl>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+				<!-- Multiple Tag Metadata -->
 
             </div>
 
@@ -151,36 +178,86 @@
 
         $( document ).ready(function() {
 
-			var txt = $('#comments'),    
-			hiddenDiv = $(document.createElement('div')),
-			content = null;
-			
-			txt.addClass('noscroll');
-			hiddenDiv.addClass('hiddendiv');
-			
-			$('body').append(hiddenDiv);
-			
-			$('.editable div').bind('click', function() {
-				var current = $(this).html();
-				var newtextarea = $(document.createElement('textarea'));
-				newtextarea.html(current);
-				newtextarea.attr('id',"comments")
-				$(this).parent().html( newtextarea );
-			});
-			
-			txt.bind('keyup', function(e) {
-
-				var txt = $(this);
-
-				content = txt.val();
+			/* 	str.replace(/microsoft/i, "W3Schools")
 				
-				content = content.replace(/\n/g, '<br>');
-				content.trim('<br>');
-				hiddenDiv.html(content + '<br class="lbr">');
+				- Get content of each field
+				- modify each content
+				- replace field content
 
-				txt.css('height', hiddenDiv.height());
+			*/
+			$('.editable').each( function() {
+				var txt = $(this).html();
+				txt = txt.replace(/(\#[a-zA-Z0-9_]+)/g, '<span class="hashtag">' + \1 + '</span>');
+				$(this).html(txt);
+			});
+
+			function savechanges() {
+				alert('changes saved');
+			}
+
+			$('.editable').bind('input', function(e) {
+
+				if( $(this).parent().data('save') != 'true' ) {
+					$(this).parent().data('save', 'true');
+
+					/* slide out 'save', 'save & hide' buttons. */
+					var newcontainer = $(document.createElement('div')),
+						newsavebutton = $(document.createElement('button')),
+						newssavehidebutton = $(document.createElement('button'));
+
+					newsavebutton.attr('type','button');
+					newsavebutton.addClass('savebutton');
+					newsavebutton.addClass('btn');
+					newsavebutton.addClass('btn-sm');
+					newsavebutton.addClass('btn-default');
+					newsavebutton.html('Save');
+					newsavebutton.bind('click', function() {
+						var artifactobj = $(this).parent().parent();
+						savechanges();
+						artifactobj.children('.artifactcontrols').hide("fast", function() {
+							$(this).remove();
+						});
+						artifactobj.data('save', 'false');
+					});
+
+					newssavehidebutton.attr('type','button');
+					newssavehidebutton.addClass('savehidebutton');
+					newssavehidebutton.addClass('btn');
+					newssavehidebutton.addClass('btn-sm');
+					newssavehidebutton.addClass('btn-primary');
+					newssavehidebutton.html('Save &amp; Hide');
+					newssavehidebutton.bind('click', function() {
+						var artifactobj = $(this).parent().parent();
+						savechanges();
+						
+						var hidemarker = $(document.createElement('div'));
+						hidemarker.addClass('hidemarker');
+						hidemarker.addClass('artifact');
+						hidemarker.html('Artifact Hidden');
+						hidemarker.hide();
+						
+						artifactobj.before(hidemarker);
+						$('.hidemarker').show("fast").delay(1600).hide("slow", function() {
+							$(this).remove();
+						});
+
+						artifactobj.hide("fast", function() {
+							$(this).remove();
+						});
+					});
+
+					newcontainer.addClass('artifactcontrols');
+					newcontainer.prepend(newsavebutton);
+					newcontainer.prepend(newssavehidebutton);
+					newcontainer.hide();
+
+					$(this).parent().children('img').before(newcontainer);
+					$(this).parent().children('.artifactcontrols').show("fast");
+
+				}
 
 			});
+
 
 		});
 	//-->

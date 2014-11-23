@@ -8,34 +8,74 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.row {
+	margin-top: 1.5em;
+}
+
 footer {
     margin: 50px 0;
 }
 
-.editable textarea {
-	width:100%;
-	border:none;
+.owner a {
+	position: relative;
+}
+
+.owner a span {
+	position: absolute;
+	left: -999em;
+}
+
+.shared-description {
+	margin-bottom:0.7em;
+}
+
+.private-comment {
+	background: #ffcccc;
+	border-radius: 4px;
+	margin-bottom:0.5em;
+	padding:0.5em 0.3em;
+}
+
+.usertag {
+	background:#ffffcc;
+	padding: 0 0.3em;
+	border-radius: 6px;
+}
+
+.hashtag {
+	background:#ccccff;
+	padding: 0 0.3em;
+	border-radius: 6px;
+}
+
+.editable {
+	border: none;
 	border-color: Transparent;
-	overflow: none;
 	outline: none;
 	resize: none;
-	
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
 
-.hiddendiv {
-    display: none;
-    white-space: pre-wrap;
-    width: 500px;
-    min-height: 50px;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    padding: 5px;
-    word-wrap: break-word;
+.artifactcontrols {
+	margin-bottom:0.5em;
 }
 
-.private-comment {
-	background: #ffffcc;
+.btn {
+	margin-right: 0.5em;
+}
+
+.hidemarker {
+	background: #ccc;
+	color: #666;
+	border this solid #999;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px #aaa;
+	padding: 1em;
+	text-align: center;
+}
+
+.img_responsive {
+	border-radius: 4px;
 }
