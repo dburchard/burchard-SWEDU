@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/edufacts.css" rel="stylesheet">
@@ -66,22 +67,6 @@
             <!-- /.navbar-collapse -->
 
 
-			<!--
-                <div class="collapse navbar-collapse">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-			-->
-
-
 
         </div>
         <!-- /.container -->
@@ -112,9 +97,6 @@
 						<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
 	
 						<div class="btn-group share-ctrls">
-							<!-- <button type="button" class="btn btn-default" aria-label="Left Align">
-								<span class="glyphicon glyphicon-share-alt"></span>
-							</button> -->
 							<button type="button" class="btn btn-default btn-sm" aria-label="Pin This">
 								<span class="glyphicon glyphicon-pushpin"></span>
 							</button>
@@ -125,16 +107,16 @@
 					</header>
 	
 					<!-- Post Content -->
-					<div class="editable shared-description" onClick="this.contentEditable='true';">
+					<div id="droppable1a" class="editable shared-description" onClick="this.contentEditable='true';">
 						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
 					</div>
 	
-					<div class="editable private-comment" onClick="this.contentEditable='true';">
+					<div id="droppable1b" class="editable private-comment" onClick="this.contentEditable='true';">
 						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
 					</div>
 	
-					<div class="editable tags-suggested">
-						@JohnDaily @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
+					<div class="editable tags-suggested draggable">
+						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
 					</div>
 	
 					<!-- Preview Image -->
@@ -169,12 +151,16 @@
 					</header>
 	
 					<!-- Post Content -->
-					<div class="editable shared-description" onClick="this.contentEditable='true';">
+					<div id="droppable2a" class="editable shared-description" onClick="this.contentEditable='true';">
 						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
 					</div>
 	
-					<div class="editable private-comment" onClick="this.contentEditable='true';">
-						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					<div id="droppable2b" class="editable private-comment" onClick="this.contentEditable='true';">
+						 id="droppable1b"@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					</div>
+	
+					<div class="editable tags-suggested draggable">
+						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
 					</div>
 	
 					<!-- Preview Image -->
@@ -209,12 +195,16 @@
 					</header>
 	
 					<!-- Post Content -->
-					<div class="editable shared-description" onClick="this.contentEditable='true';">
+					<div id="droppable3a" class="editable shared-description" onClick="this.contentEditable='true';">
 						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
 					</div>
 	
-					<div class="editable private-comment" onClick="this.contentEditable='true';">
+					<div id="droppable3b" class="editable private-comment" onClick="this.contentEditable='true';">
 						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					</div>
+	
+					<div class="editable tags-suggested draggable">
+						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
 					</div>
 	
 					<!-- Preview Image -->
@@ -249,12 +239,16 @@
 					</header>
 	
 					<!-- Post Content -->
-					<div class="editable shared-description" onClick="this.contentEditable='true';">
+					<div id="droppable4a" class="editable shared-description" onClick="this.contentEditable='true';">
 						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
 					</div>
 	
-					<div class="editable private-comment" onClick="this.contentEditable='true';">
+					<div id="droppable4b" class="editable private-comment" onClick="this.contentEditable='true';">
 						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					</div>
+	
+					<div class="editable tags-suggested draggable">
+						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
 					</div>
 	
 					<!-- Preview Image -->
@@ -289,12 +283,16 @@
 					</header>
 	
 					<!-- Post Content -->
-					<div class="editable shared-description" onClick="this.contentEditable='true';">
+					<div id="droppable5a" class="editable droppable shared-description" onClick="this.contentEditable='true';">
 						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
 					</div>
 	
-					<div class="editable private-comment" onClick="this.contentEditable='true';">
+					<div id="droppable5b" class="editable droppable private-comment" onClick="this.contentEditable='true';">
 						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+					</div>
+	
+					<div class="editable tags-suggested draggable">
+						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
 					</div>
 	
 					<!-- Preview Image -->
@@ -360,6 +358,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -384,16 +383,117 @@
 
 			function savechanges(artifactobj) {
 				/* alert('changes saved'); */
-				artifactobj.children('.editable').removeClass('tags-suggested')
 				highlighttags( $('.editable'));
 			}
 			
 			highlighttags( $('.editable') );
 
-			$('.editable').bind('input', function(e) {
 
-				if( $(this).parent().data('save') != 'true' ) {
-					$(this).parent().data('save', 'true');
+
+
+
+
+
+			$('.draggable span').draggable({
+				helper: "clone"
+			});
+
+			$('#droppable1a').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+			$('#droppable1b').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+
+
+
+
+
+			$('#droppable2a').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+			$('#droppable2b').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+
+
+
+
+
+			$('#droppable3a').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+			$('#droppable3b').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+
+
+
+
+
+			$('#droppable4a').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+			$('#droppable4b').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+
+
+
+
+
+			$('#droppable5a').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+			$('#droppable5b').droppable({
+				drop: function( event, ui ) {
+					$(this).append( ui.draggable.html() + " " );
+					preparetosave($(this).parent());
+				}
+			});
+
+
+
+
+			function preparetosave(artifactobj) {
+				if( artifactobj.data('save') != 'true' ) {
+					artifactobj.data('save', 'true');
 
 					/* slide out 'save', 'save & hide' buttons. */
 					var newcontainer = $(document.createElement('div')),
@@ -446,10 +546,16 @@
 					newcontainer.prepend(newssavehidebutton);
 					newcontainer.hide();
 
-					$(this).parent().children('a').children('.img-responsive').parent().before(newcontainer);
-					$(this).parent().children('.artifactcontrols').show("fast");
-
+					artifactobj.children('a').children('.img-responsive').parent().before(newcontainer);
+					artifactobj.children('.artifactcontrols').show("fast");
 				}
+			}
+
+
+
+			$('.editable').bind('input', function(e) {
+
+				preparetosave( $(this).parent());
 
 			});
 
