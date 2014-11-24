@@ -84,6 +84,57 @@
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
 
+
+				<!--
+				Staircase Tables (this will be the artifact I'll simulate uploading during the demo). 
+				
+				Start by suggesting the following tags:
+				
+				-->
+
+                <!-- Artifact 2 -->
+                <article class="artifact">
+
+					<header>
+						<!-- Owner -->
+						<p class="owner">
+							<a href="#"><span>Owner's Name</span></a>
+						</p>
+		
+						<!-- Date/Time -->
+						<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
+	
+						<div class="btn-group share-ctrls">
+							<button type="button" class="btn btn-default btn-sm" aria-label="Pin This">
+								<span class="glyphicon glyphicon-pushpin"></span>
+							</button>
+							<button type="button" class="btn btn-default btn-sm" aria-label="Share This">
+								<span class="glyphicon glyphicon-share-alt"></span>
+							</button>
+						</div>
+					</header>
+	
+					<!-- Post Content -->
+					<div id="droppable2a" class="editable shared-description" onClick="this.contentEditable='true';">
+						Staircase Tables
+					</div>
+	
+					<div id="droppable2b" class="editable private-comment" onClick="this.contentEditable='true';">
+						&nbsp;
+					</div>
+	
+					<div class="editable tags-suggested draggable">
+						We sugest: #Algebra #Unit3 #2ndPeriod
+					</div>
+	
+					<!-- Preview Image -->
+					<a href="#"><img class="img-responsive" src="img/staircase.jpg" alt=""></a>
+
+				</article>
+
+
+
+
                 <!-- Artifact 1 -->
                 <article class="artifact">
 
@@ -105,66 +156,21 @@
 							</button>
 						</div>
 					</header>
-	
+					
 					<!-- Post Content -->
 					<div id="droppable1a" class="editable shared-description" onClick="this.contentEditable='true';">
-						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
+						Lab Gear Area Statements: Students made summary flyers today as we get ready for tomorrow's quiz. #Algebra #4thPeriod #Unit2 #LabGear @johnd @janed #A.APR.1
 					</div>
 	
 					<div id="droppable1b" class="editable private-comment" onClick="this.contentEditable='true';">
-						@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
+						This is good evidence of #CP2, discipline-specific conceptual understanding for my evaluation!
 					</div>
 	
 					<div class="editable tags-suggested draggable">
-						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
 					</div>
 	
 					<!-- Preview Image -->
-					<a href="#"><img class="img-responsive" src="img/cardboard_city.jpg" alt=""></a>
-
-				</article>
-
-
-                <!-- Artifact 2 -->
-                <article class="artifact">
-
-					<header>
-						<!-- Owner -->
-						<p class="owner">
-							<a href="#"><span>Owner's Name</span></a>
-						</p>
-		
-						<!-- Date/Time -->
-						<p class="pubdate">Added on August 24, 2013 at 9:00 PM</p>
-	
-						<div class="btn-group share-ctrls">
-							<!-- <button type="button" class="btn btn-default" aria-label="Left Align">
-								<span class="glyphicon glyphicon-share-alt"></span>
-							</button> -->
-							<button type="button" class="btn btn-default btn-sm" aria-label="Pin This">
-								<span class="glyphicon glyphicon-pushpin"></span>
-							</button>
-							<button type="button" class="btn btn-default btn-sm" aria-label="Share This">
-								<span class="glyphicon glyphicon-share-alt"></span>
-							</button>
-						</div>
-					</header>
-	
-					<!-- Post Content -->
-					<div id="droppable2a" class="editable shared-description" onClick="this.contentEditable='true';">
-						Discussion with breakout group in #Science_Unit_3 regarding awareness campaign of #WorldToiletDay. #YBK901 @JohnDaily @WendyPlouf @TammyFeola
-					</div>
-	
-					<div id="droppable2b" class="editable private-comment" onClick="this.contentEditable='true';">
-						 id="droppable1b"@TammyFeola dominated the discussion. Poss. introduce @WendyPlouf to #DebateClub as means to further assertiveness.
-					</div>
-	
-					<div class="editable tags-suggested draggable">
-						We sugest: @JohnDailys @WendyPlouf @TammyFeola #Science_Unit_3 #YBK901 #WorldToiletDay
-					</div>
-	
-					<!-- Preview Image -->
-					<a href="#"><img class="img-responsive" src="img/singer_studio.jpg" alt=""></a>
+					<a href="#"><img class="img-responsive" src="img/lab_gear.jpg" alt=""></a>
 
 				</article>
 
@@ -252,7 +258,7 @@
 					</div>
 	
 					<!-- Preview Image -->
-					<a href="#"><img class="img-responsive" src="img/text_block.jpg" alt=""></a>
+					<a href="#"><img class="img-responsive" src="img/singer_studio.jpg" alt=""></a>
 
 				</article>
 
@@ -296,7 +302,7 @@
 					</div>
 	
 					<!-- Preview Image -->
-					<a href="#"><img class="img-responsive" src="img/local_cuisine.jpg" alt=""></a>
+					<a href="#"><img class="img-responsive" src="img/cardboard_city.jpg" alt=""></a>
 
 				</article>
 				
@@ -319,15 +325,6 @@
                         	<dl>
                         		<dt>Grade</dt>
                         		<dd>9th</dd>
-
-                        		<dt>Name</dt>
-                        		<dd><a href="#">Value</a></dd>
-
-                        		<dt>Name</dt>
-                        		<dd><a href="#">Value</a></dd>
-
-                        		<dt>Name</dt>
-                        		<dd><a href="#">Value</a></dd>
 
                         	</dl>
                         </div>
@@ -375,8 +372,8 @@
 			function highlighttags(obj) {
 				obj.each( function() {
 					var txt = $(this).text();
-					txt = txt.replace(/(#[\w\d_]+)/g, '<span class="hashtag">$1</span>');
-					txt = txt.replace(/(@[\w\d_]+)/g, '<span class="usertag">$1</span>');
+					txt = txt.replace(/(#[\w\d_\.]+)/g, '<span class="hashtag">$1</span>');
+					txt = txt.replace(/(@[\w\d_\.]+)/g, '<span class="usertag">$1</span>');
 					$(this).html(txt);
 				});
 			}
